@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+  <category>
+    <pattern>EUROMILLIONS</pattern>
+    <template><oob>
+			<mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>parser(1,1)</param>
+			</mrl>
+      </oob></template>
+  </category>
+
+  <category>
+    <pattern>résultat * derniers tirages Euromillions</pattern>
+    <template><oob>
+			<mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>parser(1,<star index="1" />)</param>
+			</mrl>
+      </oob></template>
+  </category>
+<category>
+	<pattern># INFO VALAIS #</pattern>
+	<template><oob>
+			<mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>parser(2,1)</param>
+			</mrl>
+	</oob></template>
+	</category>
+<category>
+	<pattern># info vallée #</pattern>
+	<template><srai># INFO VALAIS #</srai></template>
+	</category>
+<category>
+	<pattern># infos vallée #</pattern>
+	<template><srai># INFO VALAIS #</srai></template>
+	</category>
+
+
+<category>
+	<pattern># INFO SUISSE #</pattern>
+	<template><oob>
+			<mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>parser(3,2)</param>
+			</mrl>
+	</oob></template>
+	</category>
+<category>
+	<pattern># infos suisses #</pattern>
+	<template><srai># INFO SUISSE #</srai></template>
+	</category>
+<category>
+	<pattern># info suisses #</pattern>
+	<template><srai># INFO SUISSE #</srai></template>
+	</category>
+
+
+<category>
+	<pattern># sortie #</pattern>
+	<template><oob>
+			<mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>parser(4,0)</param>
+			</mrl>
+	</oob></template>
+	</category>
+
+</aiml>
+
